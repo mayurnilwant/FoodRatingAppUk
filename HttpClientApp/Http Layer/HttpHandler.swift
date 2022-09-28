@@ -12,6 +12,7 @@ enum HTTPError : Error {
     
     case invalidHttpResponse
     case invalidEndPoint
+    case nilData
 }
 
 enum HttpResult <T,Error> {
@@ -25,7 +26,8 @@ typealias ResultCallBack<T: Decodable> = (HttpResult<T , Error>) -> Void
 protocol HttpProtocol {
     
     func makeRequest(withUrl url: URL) -> URLRequest
-    func executeRequest<T: Decodable>(withRequest request: URLRequest, callBack: (HttpResult<T, Error>) -> Void)
+    func executeRequest<T: Decodable>(withRequest request: URLRequest, andResponseType responsetype: T.Type , callBack: (HttpResult<T, Error>) -> Void)
+    func executeRequest<T: Decodable>(withRequest request: URLRequest) async throws -> T?
 }
 
 
@@ -45,7 +47,7 @@ extension HttpProtocol {
     }
     
     
-    func executeRequest<T: Decodable>(withRequest request: URLRequest, callBack: @escaping (HttpResult<T?, Error>) -> Void) {
+    func executeRequest<T: Decodable>(withRequest request: URLRequest,andResponseType responsetype: T.Type, callBack: @escaping (HttpResult<T?, Error>) -> Void) {
         
         let task = URLSession.shared.dataTask(with: request) { resData, response, error in
             
@@ -62,5 +64,24 @@ extension HttpProtocol {
         
     }
     
+    
+    func executeRequest<T: Decodable>(withRequest request: URLRequest, andResponseType responsetype: T.Type) async throws -> T? {
+        
+        do {
+             
+            let (responseData, response) = try await URLSession.shared.data(for: request, delegate: nil)
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode, (200...299).contains(statusCode) else {
+                throw HTTPError.invalidHttpResponse
+            }
+            
+            let result = try JSONDecoder().decode(responsetype.self, from: responseData)
+            return result
+            
+            
+        }catch {
+            throw error
+        }
+        
+    }
     
 }
