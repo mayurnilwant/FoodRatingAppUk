@@ -8,6 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        
+        Task {
+            do {
+                let _ = try await RegionService().getAllRegions()
+                print("Name")
+            }catch {
+                    print(error.localizedDescription)
+                
+            }
+        }
+        
+        
+        
+    }
     var body: some View {
         Text("Hello, world!")
             .padding()
