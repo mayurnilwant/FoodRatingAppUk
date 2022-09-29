@@ -8,6 +8,15 @@
 import Foundation
 
 
+ 
+
+
+protocol ListableViewmodel: AnyObject {
+    
+    func getListItems() async throws
+}
+
+
 protocol Servicable {
     associatedtype item
     func getAllItems() async throws -> [Authority]
