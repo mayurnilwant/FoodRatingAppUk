@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E6B01E8C28E35FAE00CB64E7 /* HttpClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HttpClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B01E8C28E35FAE00CB64E7 /* FoodRatingAppUK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodRatingAppUK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B01E8F28E35FAE00CB64E7 /* HttpClientAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientAppApp.swift; sourceTree = "<group>"; };
 		E6B01E9128E35FAE00CB64E7 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 		E6B01E9328E35FAF00CB64E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		E6B01E8D28E35FAE00CB64E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E6B01E8C28E35FAE00CB64E7 /* HttpClientApp.app */,
+				E6B01E8C28E35FAE00CB64E7 /* FoodRatingAppUK.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,9 +90,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E6B01E8B28E35FAE00CB64E7 /* HttpClientApp */ = {
+		E6B01E8B28E35FAE00CB64E7 /* FoodRatingAppUK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E6B01E9A28E35FAF00CB64E7 /* Build configuration list for PBXNativeTarget "HttpClientApp" */;
+			buildConfigurationList = E6B01E9A28E35FAF00CB64E7 /* Build configuration list for PBXNativeTarget "FoodRatingAppUK" */;
 			buildPhases = (
 				E6B01E8828E35FAE00CB64E7 /* Sources */,
 				E6B01E8928E35FAE00CB64E7 /* Frameworks */,
@@ -102,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = HttpClientApp;
+			name = FoodRatingAppUK;
 			productName = HttpClientApp;
-			productReference = E6B01E8C28E35FAE00CB64E7 /* HttpClientApp.app */;
+			productReference = E6B01E8C28E35FAE00CB64E7 /* FoodRatingAppUK.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -122,7 +122,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E6B01E8728E35FAE00CB64E7 /* Build configuration list for PBXProject "HttpClientApp" */;
+			buildConfigurationList = E6B01E8728E35FAE00CB64E7 /* Build configuration list for PBXProject "FoodRatingAppUK" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E6B01E8B28E35FAE00CB64E7 /* HttpClientApp */,
+				E6B01E8B28E35FAE00CB64E7 /* FoodRatingAppUK */,
 			);
 		};
 /* End PBXProject section */
@@ -342,7 +342,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E6B01E8728E35FAE00CB64E7 /* Build configuration list for PBXProject "HttpClientApp" */ = {
+		E6B01E8728E35FAE00CB64E7 /* Build configuration list for PBXProject "FoodRatingAppUK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E6B01E9828E35FAF00CB64E7 /* Debug */,
@@ -351,7 +351,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E6B01E9A28E35FAF00CB64E7 /* Build configuration list for PBXNativeTarget "HttpClientApp" */ = {
+		E6B01E9A28E35FAF00CB64E7 /* Build configuration list for PBXNativeTarget "FoodRatingAppUK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E6B01E9B28E35FAF00CB64E7 /* Debug */,

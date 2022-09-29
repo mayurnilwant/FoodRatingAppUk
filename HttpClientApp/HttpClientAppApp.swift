@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct HttpClientAppApp: App {
+struct FoodRatingAppUK: App {
     var body: some Scene {
         WindowGroup {
             LandingPageView()
