@@ -13,8 +13,10 @@ struct LandingPageView: View {
         
         Task {
             do {
-                let regions = try await RegionService().getAllRegions()
-                print("\(String(describing: regions))")
+//                let regions = try await RegionService().getAllRegions()
+//                print("\(String(describing: regions))")
+                let authorities = try await AuthorityService().getAllItems()
+                print("\(String(describing: authorities))")
             }catch {
                     print(error.localizedDescription)
             }

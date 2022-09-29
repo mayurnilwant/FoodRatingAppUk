@@ -15,6 +15,8 @@
 		E6B01EA128E364E900CB64E7 /* HttpHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EA028E364E900CB64E7 /* HttpHandler.swift */; };
 		E6B01EA328E4805500CB64E7 /* RegionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EA228E4805500CB64E7 /* RegionsService.swift */; };
 		E6B01EA528E4AB6D00CB64E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EA428E4AB6D00CB64E7 /* Extensions.swift */; };
+		E6B01EA928E5B1FC00CB64E7 /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EA828E5B1FC00CB64E7 /* Regions.swift */; };
+		E6B01EAB28E5B21B00CB64E7 /* AppProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EAA28E5B21B00CB64E7 /* AppProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		E6B01EA028E364E900CB64E7 /* HttpHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHandler.swift; sourceTree = "<group>"; };
 		E6B01EA228E4805500CB64E7 /* RegionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsService.swift; sourceTree = "<group>"; };
 		E6B01EA428E4AB6D00CB64E7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E6B01EA828E5B1FC00CB64E7 /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
+		E6B01EAA28E5B21B00CB64E7 /* AppProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +64,12 @@
 		E6B01E8E28E35FAE00CB64E7 /* HttpClientApp */ = {
 			isa = PBXGroup;
 			children = (
+				E6B01EAC28E5B31F00CB64E7 /* Protocols */,
+				E6B01EA728E5B1EF00CB64E7 /* Models */,
+				E6B01EA628E5B1D000CB64E7 /* App Folder */,
 				E6B01E9D28E35FBD00CB64E7 /* Http Layer */,
-				E6B01E8F28E35FAE00CB64E7 /* HttpClientAppApp.swift */,
-				E6B01E9128E35FAE00CB64E7 /* LandingPage.swift */,
 				E6B01E9328E35FAF00CB64E7 /* Assets.xcassets */,
 				E6B01E9528E35FAF00CB64E7 /* Preview Content */,
-				E6B01EA228E4805500CB64E7 /* RegionsService.swift */,
 			);
 			path = HttpClientApp;
 			sourceTree = "<group>";
@@ -81,10 +85,36 @@
 		E6B01E9D28E35FBD00CB64E7 /* Http Layer */ = {
 			isa = PBXGroup;
 			children = (
+				E6B01EA228E4805500CB64E7 /* RegionsService.swift */,
 				E6B01E9E28E35FCC00CB64E7 /* EndPoint.swift */,
 				E6B01EA028E364E900CB64E7 /* HttpHandler.swift */,
 			);
 			path = "Http Layer";
+			sourceTree = "<group>";
+		};
+		E6B01EA628E5B1D000CB64E7 /* App Folder */ = {
+			isa = PBXGroup;
+			children = (
+				E6B01E8F28E35FAE00CB64E7 /* HttpClientAppApp.swift */,
+				E6B01E9128E35FAE00CB64E7 /* LandingPage.swift */,
+			);
+			path = "App Folder";
+			sourceTree = "<group>";
+		};
+		E6B01EA728E5B1EF00CB64E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6B01EA828E5B1FC00CB64E7 /* Regions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E6B01EAC28E5B31F00CB64E7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E6B01EAA28E5B21B00CB64E7 /* AppProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +189,8 @@
 			files = (
 				E6B01EA328E4805500CB64E7 /* RegionsService.swift in Sources */,
 				E6B01EA528E4AB6D00CB64E7 /* Extensions.swift in Sources */,
+				E6B01EA928E5B1FC00CB64E7 /* Regions.swift in Sources */,
+				E6B01EAB28E5B21B00CB64E7 /* AppProtocols.swift in Sources */,
 				E6B01E9F28E35FCC00CB64E7 /* EndPoint.swift in Sources */,
 				E6B01E9228E35FAE00CB64E7 /* LandingPage.swift in Sources */,
 				E6B01EA128E364E900CB64E7 /* HttpHandler.swift in Sources */,

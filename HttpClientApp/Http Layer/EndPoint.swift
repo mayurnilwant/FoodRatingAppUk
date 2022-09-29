@@ -63,4 +63,9 @@ extension EndPoint {
         EndPoint(withPath: "/regions")
         
     }
+    
+    static func getAllAuthoritiesEndPoint() -> Self {
+        EndPoint(withPath: "/authorities")
+        
+    }
 }
