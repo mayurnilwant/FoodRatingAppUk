@@ -13,15 +13,12 @@ struct ContentView: View {
         
         Task {
             do {
-                let _ = try await RegionService().getAllRegions()
-                print("Name")
+                let regions = try await RegionService().getAllRegions()
+                print("\(String(describing: regions))")
             }catch {
                     print(error.localizedDescription)
-                
             }
         }
-        
-        
         
     }
     var body: some View {
