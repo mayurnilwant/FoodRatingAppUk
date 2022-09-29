@@ -20,6 +20,7 @@
 		E6B01EB128E5C7FD00CB64E7 /* RegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EB028E5C7FD00CB64E7 /* RegionView.swift */; };
 		E6B01EB328E5C80700CB64E7 /* AuthorityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EB228E5C80700CB64E7 /* AuthorityView.swift */; };
 		E6B01EB628E5D45F00CB64E7 /* RegionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EB528E5D45F00CB64E7 /* RegionViewModel.swift */; };
+		E6B01EB828E627BD00CB64E7 /* AuthorityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EB728E627BD00CB64E7 /* AuthorityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		E6B01EB028E5C7FD00CB64E7 /* RegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionView.swift; sourceTree = "<group>"; };
 		E6B01EB228E5C80700CB64E7 /* AuthorityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorityView.swift; sourceTree = "<group>"; };
 		E6B01EB528E5D45F00CB64E7 /* RegionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewModel.swift; sourceTree = "<group>"; };
+		E6B01EB728E627BD00CB64E7 /* AuthorityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B01EB528E5D45F00CB64E7 /* RegionViewModel.swift */,
+				E6B01EB728E627BD00CB64E7 /* AuthorityViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				E6B01E9F28E35FCC00CB64E7 /* EndPoint.swift in Sources */,
 				E6B01E9228E35FAE00CB64E7 /* LandingPage.swift in Sources */,
 				E6B01EB128E5C7FD00CB64E7 /* RegionView.swift in Sources */,
+				E6B01EB828E627BD00CB64E7 /* AuthorityViewModel.swift in Sources */,
 				E6B01EB628E5D45F00CB64E7 /* RegionViewModel.swift in Sources */,
 				E6B01EA128E364E900CB64E7 /* HttpHandler.swift in Sources */,
 				E6B01E9028E35FAE00CB64E7 /* HttpClientAppApp.swift in Sources */,

@@ -11,8 +11,30 @@ import SwiftUI
 
 struct AuthorityView : View {
     
+    @ObservedObject var authVM: AuthorityViewModel
+    
+    init(withAuthViewModel vModel : AuthorityViewModel) {
+        self.authVM = vModel
+    }
     var body: some View {
         
-        Text("Authority")
+        NavigationView {
+            List( content: {
+                
+                ForEach(self.authVM.items) { authority in
+                    Text(authority.name)
+                }
+            })
+            
+            .onAppear {
+                Task {
+                    try await self.authVM.getAllItems()
+                    
+                }
+            }
+        }
+      
+        
+        
     }
 }

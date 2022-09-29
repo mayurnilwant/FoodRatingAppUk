@@ -36,8 +36,9 @@ struct Regions: Decodable {
     }
 }
 
-struct Authority: Decodable {
+struct Authority: Decodable, Identifiable {
     
+    var id = UUID()
     var localAuthorityId  = 0
     var localAuthorityIdCode  = ""
     var name  = ""

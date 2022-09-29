@@ -21,7 +21,7 @@ struct LandingPageView: View {
                     Label("Region", systemImage: "globe.americas.fill")
                 }
             
-            AuthorityView()
+            AuthorityView(withAuthViewModel: AuthorityViewModel(withAuthorityService: AuthorityService()))
                 .tabItem {
                     Label("Authorities", systemImage: "network.badge.shield.half.filled")
                 }

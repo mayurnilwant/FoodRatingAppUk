@@ -18,6 +18,7 @@ import Combine
         
             Task {
                 self.items = try await RegionService().getAllRegions()?.regions ?? [Region]()
+                print("")
             }
         
     }

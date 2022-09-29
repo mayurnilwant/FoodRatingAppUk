@@ -25,7 +25,7 @@ struct RegionView : View {
     
     init(withViewModel regionVM: RegionViewModel) {
         self.regionVM = regionVM
-        self.listItems = [Item(),Item(),Item(),Item(),Item(),Item(),Item()]
+        //self.listItems = [Item(),Item(),Item(),Item(),Item(),Item(),Item()]
     }
     var body: some View {
         
