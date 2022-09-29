@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Region: Decodable {
+struct Region: Decodable, Identifiable {
     
-    var id: Int
+    var id : Int
     var name: String
     var nameKey: String
     var code: String
@@ -28,6 +28,7 @@ struct Regions: Decodable {
         do {
             let container = try? decoder.container(keyedBy: CodingKeys.self)
             self.regions = try container?.decodeIfPresent([Region].self, forKey: .regions) ?? [Region]()
+            print("Name")
         }catch {
             print(error.localizedDescription)
         }

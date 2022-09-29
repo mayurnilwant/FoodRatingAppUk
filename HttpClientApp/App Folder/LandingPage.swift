@@ -9,25 +9,14 @@ import SwiftUI
 
 struct LandingPageView: View {
     
-    init() {
+    init() {}
         
-        Task {
-            do {
-//                let regions = try await RegionService().getAllRegions()
-//                print("\(String(describing: regions))")
-                let authorities = try await AuthorityService().getAllItems()
-                print("\(String(describing: authorities))")
-            }catch {
-                    print(error.localizedDescription)
-            }
-        }
-        
-    }
+    
     var body: some View {
         
         
         TabView {
-            RegionView()
+            RegionView(withViewModel: RegionViewModel())
                 .tabItem {
                     Label("Region", systemImage: "globe.americas.fill")
                 }

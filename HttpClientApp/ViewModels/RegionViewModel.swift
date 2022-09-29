@@ -6,24 +6,19 @@
 //
 
 import Foundation
+import Combine
 
-
-class RegionViewModel : ListableViewmodel, ObservableObject {
+ class RegionViewModel : ObservableObject {
     
-    @Published var items: [Region]?
-    
+    @Published var items = [Region]()
     
     init() {}
     
-    
-    func getListItems() async throws {
+    @MainActor func getListItems() async throws {
         
-        do  {
-            self.items? = try await RegionService().getAllRegions()?.regions ?? [Region]()
-            
-        }catch {
-            print(error)
-        }
+            Task {
+                self.items = try await RegionService().getAllRegions()?.regions ?? [Region]()
+            }
         
     }
     
