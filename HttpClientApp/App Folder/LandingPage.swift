@@ -24,8 +24,20 @@ struct LandingPageView: View {
         
     }
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        
+        TabView {
+            RegionView()
+                .tabItem {
+                    Label("Region", systemImage: "globe.americas.fill")
+                }
+            
+            AuthorityView()
+                .tabItem {
+                    Label("Authorities", systemImage: "network.badge.shield.half.filled")
+                }
+                
+        }.accentColor(.red)
     }
 }
 

@@ -17,6 +17,8 @@
 		E6B01EA528E4AB6D00CB64E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EA428E4AB6D00CB64E7 /* Extensions.swift */; };
 		E6B01EA928E5B1FC00CB64E7 /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EA828E5B1FC00CB64E7 /* Regions.swift */; };
 		E6B01EAB28E5B21B00CB64E7 /* AppProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EAA28E5B21B00CB64E7 /* AppProtocols.swift */; };
+		E6B01EB128E5C7FD00CB64E7 /* RegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EB028E5C7FD00CB64E7 /* RegionView.swift */; };
+		E6B01EB328E5C80700CB64E7 /* AuthorityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01EB228E5C80700CB64E7 /* AuthorityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		E6B01EA428E4AB6D00CB64E7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E6B01EA828E5B1FC00CB64E7 /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
 		E6B01EAA28E5B21B00CB64E7 /* AppProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProtocols.swift; sourceTree = "<group>"; };
+		E6B01EB028E5C7FD00CB64E7 /* RegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionView.swift; sourceTree = "<group>"; };
+		E6B01EB228E5C80700CB64E7 /* AuthorityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		E6B01E8E28E35FAE00CB64E7 /* HttpClientApp */ = {
 			isa = PBXGroup;
 			children = (
+				E6B01EAF28E5C7F300CB64E7 /* Views */,
 				E6B01EAC28E5B31F00CB64E7 /* Protocols */,
 				E6B01EA728E5B1EF00CB64E7 /* Models */,
 				E6B01EA628E5B1D000CB64E7 /* App Folder */,
@@ -115,6 +120,15 @@
 				E6B01EAA28E5B21B00CB64E7 /* AppProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E6B01EAF28E5C7F300CB64E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6B01EB028E5C7FD00CB64E7 /* RegionView.swift */,
+				E6B01EB228E5C80700CB64E7 /* AuthorityView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,10 +203,12 @@
 			files = (
 				E6B01EA328E4805500CB64E7 /* RegionsService.swift in Sources */,
 				E6B01EA528E4AB6D00CB64E7 /* Extensions.swift in Sources */,
+				E6B01EB328E5C80700CB64E7 /* AuthorityView.swift in Sources */,
 				E6B01EA928E5B1FC00CB64E7 /* Regions.swift in Sources */,
 				E6B01EAB28E5B21B00CB64E7 /* AppProtocols.swift in Sources */,
 				E6B01E9F28E35FCC00CB64E7 /* EndPoint.swift in Sources */,
 				E6B01E9228E35FAE00CB64E7 /* LandingPage.swift in Sources */,
+				E6B01EB128E5C7FD00CB64E7 /* RegionView.swift in Sources */,
 				E6B01EA128E364E900CB64E7 /* HttpHandler.swift in Sources */,
 				E6B01E9028E35FAE00CB64E7 /* HttpClientAppApp.swift in Sources */,
 			);
