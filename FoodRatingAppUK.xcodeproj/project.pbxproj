@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6570B5E28ED8EBE0013BB79 /* LoadingActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6570B5D28ED8EBE0013BB79 /* LoadingActivityView.swift */; };
 		E6B01E9028E35FAE00CB64E7 /* HttpClientAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01E8F28E35FAE00CB64E7 /* HttpClientAppApp.swift */; };
 		E6B01E9228E35FAE00CB64E7 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01E9128E35FAE00CB64E7 /* LandingPage.swift */; };
 		E6B01E9428E35FAF00CB64E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6B01E9328E35FAF00CB64E7 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E6570B5D28ED8EBE0013BB79 /* LoadingActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingActivityView.swift; sourceTree = "<group>"; };
 		E6B01E8C28E35FAE00CB64E7 /* FoodRatingAppUK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodRatingAppUK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B01E8F28E35FAE00CB64E7 /* HttpClientAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientAppApp.swift; sourceTree = "<group>"; };
 		E6B01E9128E35FAE00CB64E7 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				E6B01EB028E5C7FD00CB64E7 /* RegionView.swift */,
 				E6B01EB228E5C80700CB64E7 /* AuthorityView.swift */,
+				E6570B5D28ED8EBE0013BB79 /* LoadingActivityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6570B5E28ED8EBE0013BB79 /* LoadingActivityView.swift in Sources */,
 				E6B01EA328E4805500CB64E7 /* RegionsService.swift in Sources */,
 				E6B01EA528E4AB6D00CB64E7 /* Extensions.swift in Sources */,
 				E6B01EB328E5C80700CB64E7 /* AuthorityView.swift in Sources */,

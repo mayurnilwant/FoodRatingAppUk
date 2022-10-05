@@ -12,7 +12,7 @@ import Combine
 
 struct RegionView : View {
 
-    @State private var isLoading: Bool = false
+    @State private var loading: Bool = false
     @ObservedObject var regionVM : RegionViewModel
     
     
@@ -28,15 +28,11 @@ struct RegionView : View {
                     Text("\(region.name)")
                 }
             }
-            if #available(iOS 14.0, *) {
-                if self.isLoading {
-                    LoadingIndicatorView()
-                    
+                if self.loading {
+                    LoadingIndicatorView(loading: $loading)
                 }
                 
-            } else {
-                // Fallback on earlier versions
-            }
+            
           
                 
         }
@@ -50,9 +46,9 @@ struct RegionView : View {
      private func getRegionList() {
         Task {
             do {
-                self.isLoading.toggle()
+                self.loading.toggle()
                     try await self.regionVM.getListItems()
-                    self.isLoading.toggle()
+                    self.loading.toggle()
                 
             }catch {
                 
@@ -61,19 +57,4 @@ struct RegionView : View {
     }
 }
 
-struct LoadingIndicatorView: View {
-    var body: some View {
-        ZStack {
-            Color(UIColor.gray)
-                .opacity(0.3)
-            if #available(iOS 14.0, *) {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .scaleEffect(2.0)
-                    .ignoresSafeArea()
-            } else {
-                // Fallback on earlier versions
-            }
-        }
-    }
-}
+
