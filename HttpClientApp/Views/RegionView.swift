@@ -22,24 +22,25 @@ struct RegionView : View {
     }
     var body: some View {
         
-        ZStack {
-            List{
-                ForEach(self.regionVM.items, id: \.id) { region in
-                    Text("\(region.name)")
+        ActivityContainerView(withBinding: $loading, andThemeColor: .gray) {
+            ZStack {
+                List{
+                    ForEach(self.regionVM.items, id: \.id) { region in
+                        Text("\(region.name)")
+                    }
                 }
+                    if self.loading {
+                        LoadingIndicatorView(loading: $loading)
+                    }
+                    
             }
-                if self.loading {
-                    LoadingIndicatorView(loading: $loading)
-                }
-                
-            
-          
-                
+            .onAppear {
+                    self.getRegionList()
+               
+            }
+
         }
-        .onAppear {
-                self.getRegionList()
-           
-        }
+        
     }
     
     
@@ -48,7 +49,7 @@ struct RegionView : View {
             do {
                 self.loading.toggle()
                     try await self.regionVM.getListItems()
-                    self.loading.toggle()
+                    //self.loading.toggle()
                 
             }catch {
                 

@@ -9,6 +9,32 @@ import Foundation
 import SwiftUI
 
 
+struct ActivityContainerView<Content: View>: View {
+    
+    
+    let content: Content
+    let themeColor: Color
+    @Binding var loading : Bool
+    
+    init(withBinding loading: Binding<Bool>,andThemeColor tColor: Color ,@ViewBuilder content: () -> Content) {
+        self.themeColor = tColor
+        self.content = content()
+        self._loading = loading
+        
+    }
+    var body: some View {
+        ZStack {
+            if loading {
+                LoadingIndicatorView(loading: $loading)
+                    .opacity(loading ? 1 : 0)
+            }
+            content
+                .opacity(loading ? 0 : 1)
+        }
+    }
+}
+
+
 struct ActiviIndicatorLoadingView: UIViewRepresentable {
     
     @Binding var loading: Bool
