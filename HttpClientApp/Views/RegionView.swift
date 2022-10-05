@@ -10,17 +10,10 @@ import SwiftUI
 import Combine
 
 
-struct Item : Identifiable {
-    
-    var id =  UUID()
-    var name = "Mayur"
-}
-
 struct RegionView : View {
 
     @State private var isLoading: Bool = false
     @ObservedObject var regionVM : RegionViewModel
-    var listItems = [Item]()
     
     
     init(withViewModel regionVM: RegionViewModel) {
