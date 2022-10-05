@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 
  
-
+//protocol Loadableview where Self : View { 
+//    
+//    var isLoading: Bool{get}
+//}
 
 protocol ListableViewmodel: AnyObject {
     

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LandingPageView: View {
+    @State private var isLoading = false
     
     init() {}
         
@@ -18,15 +19,25 @@ struct LandingPageView: View {
         TabView {
             RegionView(withViewModel: RegionViewModel())
                 .tabItem {
-                    Label("Region", systemImage: "globe.americas.fill")
+                    if #available(iOS 14.0, *) {
+                        Label("Region", systemImage: "globe.americas.fill")
+                    } else {
+                        // Fallback on earlier versions
+                    }
                 }
             
             AuthorityView(withAuthViewModel: AuthorityViewModel(withAuthorityService: AuthorityService()))
                 .tabItem {
-                    Label("Authorities", systemImage: "network.badge.shield.half.filled")
+                    if #available(iOS 14.0, *) {
+                        Label("Authorities", systemImage: "network.badge.shield.half.filled")
+                    } else {
+                        // Fallback on earlier versions
+                    }
                 }
                 
         }.accentColor(.red)
+        
+        
     }
 }
 

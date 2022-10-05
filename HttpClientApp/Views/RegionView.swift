@@ -18,9 +18,9 @@ struct Item : Identifiable {
 
 struct RegionView : View {
 
+    @State private var isLoading: Bool = false
     @ObservedObject var regionVM : RegionViewModel
     var listItems = [Item]()
-    
     
     
     init(withViewModel regionVM: RegionViewModel) {
@@ -29,22 +29,58 @@ struct RegionView : View {
     }
     var body: some View {
         
+        ZStack {
             List{
                 ForEach(self.regionVM.items, id: \.id) { region in
                     Text("\(region.name)")
                 }
             }
-            .onAppear {
-                Task {
-                    do {
-                        try await self.regionVM.getListItems()
-                    }catch {
-                        
-                    }
+            if #available(iOS 14.0, *) {
+                if self.isLoading {
+                    LoadingIndicatorView()
+                    
                 }
                 
+            } else {
+                // Fallback on earlier versions
             }
+          
+                
+        }
+        .onAppear {
+                self.getRegionList()
+           
+        }
     }
     
     
+     private func getRegionList() {
+        Task {
+            do {
+                self.isLoading.toggle()
+                    try await self.regionVM.getListItems()
+                    self.isLoading.toggle()
+                
+            }catch {
+                
+            }
+        }
+    }
+}
+
+struct LoadingIndicatorView: View {
+    var body: some View {
+        ZStack {
+            Color(UIColor.gray)
+                .opacity(0.3)
+            if #available(iOS 14.0, *) {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .scaleEffect(2.0)
+                    .ignoresSafeArea()
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+    }
 }
