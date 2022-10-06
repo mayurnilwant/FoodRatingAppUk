@@ -41,6 +41,7 @@
 		E6B01EB228E5C80700CB64E7 /* AuthorityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorityView.swift; sourceTree = "<group>"; };
 		E6B01EB528E5D45F00CB64E7 /* RegionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewModel.swift; sourceTree = "<group>"; };
 		E6B01EB728E627BD00CB64E7 /* AuthorityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorityViewModel.swift; sourceTree = "<group>"; };
+		E6B4360528EEEBA200CDC1B7 /* FoodRatingAppUK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FoodRatingAppUK-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		E6B01E8328E35FAE00CB64E7 = {
 			isa = PBXGroup;
 			children = (
+				E6B4360528EEEBA200CDC1B7 /* FoodRatingAppUK-Info.plist */,
 				E6B01EA428E4AB6D00CB64E7 /* Extensions.swift */,
 				E6B01E8E28E35FAE00CB64E7 /* HttpClientApp */,
 				E6B01E8D28E35FAE00CB64E7 /* Products */,
@@ -361,7 +363,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HttpClientApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "FoodRatingAppUK-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -389,7 +391,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HttpClientApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "FoodRatingAppUK-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

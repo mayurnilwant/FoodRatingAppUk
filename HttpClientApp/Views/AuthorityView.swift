@@ -19,7 +19,7 @@ struct AuthorityView : View {
     }
     var body: some View {
         
-        ActivityContainerView(withBinding: $loading, andThemeColor: .red) {
+        ActivityIndicatorContainerView(withBinding: $loading, andThemeColor: .red) {
             NavigationView {
                 List( content: {
                     

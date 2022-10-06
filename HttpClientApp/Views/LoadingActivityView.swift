@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-struct ActivityContainerView<Content: View>: View {
+struct ActivityIndicatorContainerView<Content: View>: View {
     
     
     let content: Content

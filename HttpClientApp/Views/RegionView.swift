@@ -21,7 +21,7 @@ struct RegionView : View {
     }
     var body: some View {
         
-        ActivityContainerView(withBinding: $loading, andThemeColor: .gray) {
+        ActivityIndicatorContainerView(withBinding: $loading, andThemeColor: .gray) {
             ZStack {
                 List{
                     ForEach(self.regionVM.items, id: \.id) { region in
@@ -43,6 +43,7 @@ struct RegionView : View {
                 self.loading.toggle()
                   let _ =  try await self.regionVM.getListItems()
                 self.loading.toggle()
+                print("status changed.")
                 
             }catch {
                 print(error)
