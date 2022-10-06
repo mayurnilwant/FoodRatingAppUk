@@ -24,12 +24,35 @@ struct ActivityContainerView<Content: View>: View {
     }
     var body: some View {
         ZStack {
+            
             if loading {
-                LoadingIndicatorView(loading: $loading)
-                    .opacity(loading ? 1 : 0)
+                ZStack {
+                    
+                        Color(UIColor.gray)
+                            .opacity(0.3)
+                        if #available(iOS 14.0, *) {
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle())
+                                .scaleEffect(2.0)
+                                .ignoresSafeArea()
+                        } else {
+                            // Fallback on earlier versions
+                            ActiviIndicatorLoadingView(loading: $loading, style: .medium)
+
+                        }
+                    }
+                
             }
+            
             content
-                .opacity(loading ? 0 : 1)
+                .opacity(loading ? 0: 1)
+
+//            if loading {
+//                LoadingIndicatorView(loading: $loading)
+//                    .opacity(loading ? 1 : 0)
+//            }
+//            content
+//                .opacity(loading ? 0 : 1)
         }
     }
 }
@@ -50,28 +73,34 @@ struct ActiviIndicatorLoadingView: UIViewRepresentable {
     }
     
     typealias UIViewType = UIActivityIndicatorView
-    
 
 }
-
 
 struct LoadingIndicatorView: View {
     @Binding var  loading: Bool
     
     var body: some View {
-        ZStack {
-            Color(UIColor.gray)
-                .opacity(0.3)
-            if #available(iOS 14.0, *) {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .scaleEffect(2.0)
-                    .ignoresSafeArea()
-            } else {
-                // Fallback on earlier versions
-                ActiviIndicatorLoadingView(loading: $loading, style: .medium)
+        
+        
+        if loading {
+            ZStack {
+                
+                    Color(UIColor.gray)
+                        .opacity(0.3)
+                    if #available(iOS 14.0, *) {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .scaleEffect(2.0)
+                            .ignoresSafeArea()
+                    } else {
+                        // Fallback on earlier versions
+                        ActiviIndicatorLoadingView(loading: $loading, style: .medium)
 
-            }
+                    }
+                }
+            
         }
+        
+        
     }
 }

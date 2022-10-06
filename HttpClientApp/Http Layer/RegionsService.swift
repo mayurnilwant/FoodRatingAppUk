@@ -32,16 +32,12 @@ class AuthorityService: HttpServicable,Servicable {
             throw HTTPError.invalidEndPoint
         }
         let request = self.makeRequest(withUrl: _url, andHttpMethod: .get, andHeaderDictionary: Dictionary<String, String>.HeaderDictionary)
-        do {
             let authorities = try await self.executeRequest(withRequest: request, andResponseType: Authorities.self)
             return authorities?.authorities ?? [Authority]()
-        }catch {
-            print(error)
-        }
-        return [Authority]()
+    
     }
     
-    func getResult(byid id: String) -> Authority {
+    func getItem(byid id: String) -> Authority {
      
         return Authority()
     }

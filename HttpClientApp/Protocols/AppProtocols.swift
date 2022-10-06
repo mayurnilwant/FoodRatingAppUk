@@ -24,6 +24,6 @@ protocol ListableViewmodel: AnyObject {
 protocol Servicable {
     associatedtype item
     func getAllItems() async throws -> [Authority]
-    func getResult(byid id: String) -> item
+    func getItem(byid id: String) -> item
     
 }

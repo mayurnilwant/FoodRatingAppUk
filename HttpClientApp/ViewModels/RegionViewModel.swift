@@ -16,13 +16,8 @@ import Combine
     
     @MainActor func getListItems() async throws {
         
-            Task {
-                self.items = try await RegionService().getAllRegions()?.regions ?? [Region]()
-                print("")
-            }
         
-    }
-    
-    
-    
+            self.items = try await RegionService().getAllRegions()?.regions ?? [Region]()
+            
+        }
 }

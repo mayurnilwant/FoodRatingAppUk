@@ -18,7 +18,6 @@ struct RegionView : View {
     
     init(withViewModel regionVM: RegionViewModel) {
         self.regionVM = regionVM
-        //self.listItems = [Item(),Item(),Item(),Item(),Item(),Item(),Item()]
     }
     var body: some View {
         
@@ -29,30 +28,24 @@ struct RegionView : View {
                         Text("\(region.name)")
                     }
                 }
-                    if self.loading {
-                        LoadingIndicatorView(loading: $loading)
-                    }
-                    
             }
             .onAppear {
                     self.getRegionList()
-               
             }
-
         }
         
     }
     
     
-     private func getRegionList() {
+    private func getRegionList() {
         Task {
             do {
                 self.loading.toggle()
-                    try await self.regionVM.getListItems()
-                    //self.loading.toggle()
+                  let _ =  try await self.regionVM.getListItems()
+                self.loading.toggle()
                 
             }catch {
-                
+                print(error)
             }
         }
     }

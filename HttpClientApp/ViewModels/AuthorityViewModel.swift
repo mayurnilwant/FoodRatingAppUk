@@ -19,12 +19,8 @@ class AuthorityViewModel: ObservableObject {
     
      @MainActor func getAllItems() async throws  {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2 ){ [weak self] in
             
-            Task {
-                self?.items = try await self?.authServiceHandler.getAllItems() ?? [Authority]()
-            }
+                self.items = try await self.authServiceHandler.getAllItems()
             
-        }
     }
 }

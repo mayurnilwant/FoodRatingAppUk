@@ -95,19 +95,38 @@ extension HttpServicable {
         
         do {
             
-            let (responseData, response) = try await URLSession.shared.data(for: request, delegate: nil)
-            guard let statusCode = (response as? HTTPURLResponse)?.statusCode, (200...299).contains(statusCode) else {
-                throw HTTPError.invalidHttpResponse
-            
+            if #available(iOS 15.0, *) {
+                let (responseData, response) = try await URLSession.shared.data(for: request, delegate: nil)
+                guard let statusCode = (response as? HTTPURLResponse)?.statusCode, (200...299).contains(statusCode) else {
+                    throw HTTPError.invalidHttpResponse
+                
+                }
+                let result = try  JSONDecoder().decode(responsetype.self, from: responseData)
+                return result
+            } else {
+                
+                let requestResult : T? = try await withCheckedThrowingContinuation({ continuation in
+                    
+                    self.executeRequest(withRequest: request, andResponseType: responsetype.self) { response in
+                        switch response {
+                            
+                        case .success( let responseResult):
+                            do {
+                                continuation.resume(returning: responseResult)
+                            }
+                        case .failure(_):
+                            continuation.resume(throwing: HTTPError.nilData)
+                        }
+                    }
+                    
+                })
+                
+                return requestResult
             }
-            let result = try JSONDecoder().decode(responsetype.self, from: responseData)
-            return result
-            
         }catch {
             throw error
+            }
+            
         }
-        
-    }
-    
     
 }
